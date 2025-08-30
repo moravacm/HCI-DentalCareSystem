@@ -1,0 +1,136 @@
+﻿<Window
+    x:Class="DentalCareSystem.Forms.Windows.Modals.PatientModal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DentalCareSystem.Util"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="PatientModal"
+    AllowsTransparency="True"
+    Background="#33000000"
+    WindowStartupLocation="CenterOwner"
+    WindowState="Maximized"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Grid
+        Margin="0,0,0,0"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Background="{StaticResource MaterialDesignCardBackground}">
+
+        <materialDesign:Snackbar
+            x:Name="PatientModalSnackbar"
+            Background="{StaticResource MaterialDesignSnackbarRipple}"
+            IsActive="False"
+            MessageQueue="{materialDesign:MessageQueue}" />
+
+        <StackPanel
+            MinWidth="300"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Stretch"
+            UseLayoutRounding="False">
+            <Label
+                Margin="20,20,20,0"
+                Padding="4,4,4,4"
+                HorizontalAlignment="Center"
+                x:Name="ModalTitle"
+                VerticalAlignment="Top"
+                local:LocalizationProvider.ContentID="AddNewPatient"
+                FontSize="16"
+                FontWeight="Bold" />
+
+            <TextBox
+                x:Name="IdTextBox"
+                MaxWidth="250"
+                Margin="0,20,0,10"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Stretch"
+                local:LocalizationProvider.ContentID="ID"
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                TabIndex="0"
+                Text="{Binding JMBG}" />    
+
+            <TextBox
+                x:Name="FirstNameTextBox"
+                MaxWidth="250"
+                Margin="0,20,0,10"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Stretch"
+                local:LocalizationProvider.ContentID="FirstName"
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                TabIndex="1"
+                Text="{Binding FirstName}" />
+
+            <TextBox
+                x:Name="LastNameTextBox"
+                MaxWidth="250"
+                Margin="0,0,0,10"
+                local:LocalizationProvider.ContentID="LastName"
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                TabIndex="2"
+                Text="{Binding LastName}" />
+
+            <TextBox
+                x:Name="PhoneNumberTextBox"
+                MaxWidth="250"
+                Margin="0,0,0,10"
+                local:LocalizationProvider.ContentID="PhoneNumber"
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                TabIndex="3"
+                Text="{Binding PhoneNumber}" />
+
+            <TextBox
+                x:Name="EmailTextBox"
+                MaxWidth="250"
+                Margin="0,0,0,10"
+                local:LocalizationProvider.ContentID="Email"
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                TabIndex="4"
+                Text="{Binding Email}" />
+
+            <TextBox
+                x:Name="AddressTextBox"
+                MaxWidth="250"
+                Margin="0,0,0,10"
+                local:LocalizationProvider.ContentID="Address"
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                TabIndex="5"
+                Text="{Binding Address}" />
+
+            <TextBox
+                x:Name="MedicalHistoryTextBox"
+                MaxWidth="250"
+                Margin="0,0,0,10"
+                local:LocalizationProvider.ContentID="MedicalHistory"
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                TabIndex="6"
+                Text="{Binding MedicalHistory}" />
+
+            <StackPanel
+                Margin="0,0,0,50"
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
+                <Button
+                    MinWidth="110"
+                    Margin="0,0,30,0"
+                    HorizontalAlignment="Left"
+                    local:LocalizationProvider.ContentID="Save"
+                    Click="AddOrUpdate_Click"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    TabIndex="7" />
+                <Button
+                    MinWidth="110"
+                    local:LocalizationProvider.ContentID="Cancel"
+                    BorderBrush="#FF7D7373"
+                    BorderThickness="1,1,1,1"
+                    Click="Cancel_Click"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Style="{StaticResource MaterialDesignFlatButton}"
+                    TabIndex="8" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

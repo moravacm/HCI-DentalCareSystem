@@ -1,0 +1,173 @@
+﻿<Window x:Class="DentalCareSystem.Forms.Windows.Modals.DetailedExaminationModal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DentalCareSystem.Util"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="DetailedExaminationModal"
+        AllowsTransparency="True"
+        Background="#33000000"
+        FontFamily="{StaticResource MaterialDesignFont}"
+        FontSize="15"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        WindowStyle="None"
+        mc:Ignorable="d">
+
+    <Grid Margin="0,0,0,0"
+          Width="450"
+          MinHeight="620"
+          HorizontalAlignment="Center"
+          VerticalAlignment="Center"
+          Background="{StaticResource MaterialDesignCardBackground}">
+
+        <StackPanel Width="400" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Background="White">
+            <Label Margin="20,20,20,0"
+                   Padding="4,4,4,4"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"
+                   local:LocalizationProvider.ContentID="ExaminationDetails"
+                   FontSize="16"
+                   FontWeight="Bold" />
+
+            <TextBlock Margin="20,20,20,5"
+                       local:LocalizationProvider.ContentID="PatientInformation"
+                       FontWeight="Bold" />
+
+            <Grid Margin="20,0,20,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0"
+                           local:LocalizationProvider.ContentID="NameSurname"
+                           FontWeight="Bold" Margin="0,0,10,5"/>
+                <TextBlock Grid.Row="0" Grid.Column="1"
+                           x:Name="PatientNameTextBlock" Margin="0,0,0,5"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0"
+                           local:LocalizationProvider.ContentID="PatientID"
+                           FontWeight="Bold" Margin="0,0,10,5"/>
+                <TextBlock Grid.Row="1" Grid.Column="1"
+                           x:Name="PatientJMBGTextBlock" Margin="0,0,0,5"/>
+
+                <TextBlock Grid.Row="2" Grid.Column="0"
+                           local:LocalizationProvider.ContentID="Email"
+                           FontWeight="Bold" Margin="0,0,10,5"/>
+                <TextBlock Grid.Row="2" Grid.Column="1"
+                           x:Name="PatientEmailTextBlock" Margin="0,0,0,5"/>
+
+                <TextBlock Grid.Row="3" Grid.Column="0"
+                           local:LocalizationProvider.ContentID="Phone"
+                           FontWeight="Bold" Margin="0,0,10,5"/>
+                <TextBlock Grid.Row="3" Grid.Column="1"
+                           x:Name="PatientPhoneTextBlock" Margin="0,0,0,5"/>
+            </Grid>
+
+            <Separator Margin="20,10,20,10" Background="#DDDDDD" />
+
+            <TextBlock Margin="20,10,20,5"
+                       local:LocalizationProvider.ContentID="ExaminationInformation"
+                       FontWeight="Bold" />
+
+            <Grid Margin="20,0,20,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0"
+                           local:LocalizationProvider.ContentID="Date"
+                           FontWeight="Bold" Margin="0,0,10,5"/>
+                <TextBlock Grid.Row="0" Grid.Column="1"
+                           x:Name="ExaminationDateTextBlock" Margin="0,0,0,5"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0"
+                           local:LocalizationProvider.ContentID="Diagnosis"
+                           FontWeight="Bold" Margin="0,0,10,5"/>
+                <TextBlock Grid.Row="1" Grid.Column="1"
+                           x:Name="DiagnosisTextBlock" Margin="0,0,0,5" TextWrapping="Wrap"/>
+            </Grid>
+
+            <Separator Margin="20,10,20,10" Background="#DDDDDD" />
+
+            <TextBlock Margin="20,10,20,5"
+                       local:LocalizationProvider.ContentID="Dentist"
+                       FontWeight="Bold" />
+
+            <Grid Margin="20,0,20,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0"
+                           x:Name="DentistNameTextBlock" Margin="0,0,0,5"/>
+            </Grid>
+
+            <Separator Margin="20,10,20,10" Background="#DDDDDD" />
+
+            <StackPanel x:Name="MedicalTechnicianPanel" Margin="20,10,20,10">
+                <TextBlock local:LocalizationProvider.ContentID="MedicalTechnician"
+                           FontWeight="Bold" Margin="0,0,0,5"/>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Row="0" Grid.Column="0"
+                               x:Name="MedicalTechnicianNameTextBlock" Margin="0,0,0,5"/>
+                </Grid>
+            </StackPanel>
+
+            <Separator Margin="20,10,20,10" Background="#DDDDDD" />
+
+            <TextBlock Margin="20,10,20,5"
+                       local:LocalizationProvider.ContentID="Treatments"
+                       FontWeight="Bold" />
+
+            <DataGrid x:Name="TreatmentsDataGrid"
+                      Margin="20,0,20,10"
+                      MaxHeight="150"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      HeadersVisibility="None"
+                      Background="Transparent"
+                      BorderThickness="0"
+                      GridLinesVisibility="None">
+                <DataGrid.Columns>
+                    <DataGridTextColumn
+                        Binding="{Binding TreatmentName}"
+                        Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Button local:LocalizationProvider.ContentID="Close"
+                    HorizontalAlignment="Center"
+                    Margin="0,0,0,20"
+                    Click="CloseButton_Click"
+                    Width="100" Height="35"
+                    FontSize="16"
+                    FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</Window>

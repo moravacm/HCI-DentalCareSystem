@@ -1,0 +1,111 @@
+﻿<Window
+    x:Class="DentalCareSystem.Forms.Windows.Modals.AppointmentSelectionModal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DentalCareSystem.Util"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="AppointmentSelectionModal"
+    AllowsTransparency="True"
+    Background="#33000000"
+    WindowStartupLocation="CenterOwner"
+    WindowStyle="None"
+    ResizeMode="NoResize"
+    WindowState="Maximized"
+    mc:Ignorable="d">
+
+    <materialDesign:Card
+        Width="750"
+        MinHeight="550"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Margin="25"
+        Background="White"
+        UniformCornerRadius="8">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <materialDesign:Card Grid.Row="0" Margin="10,10,10,5">
+                <Label
+                    Margin="15"
+                    local:LocalizationProvider.ContentID="SelectAppointment"
+                    FontSize="18"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Center"
+                    Style="{StaticResource MaterialDesignLabel}" />
+            </materialDesign:Card>
+
+            <DataGrid
+                x:Name="AppointmentsDataGrid"
+                Grid.Row="1"
+                Margin="10,5,10,5"
+                AutoGenerateColumns="False"
+                CanUserAddRows="False"
+                CanUserDeleteRows="False"
+                FontFamily="{DynamicResource MaterialDesignFont}"
+                FontSize="14"
+                IsReadOnly="True"
+                ItemsSource="{Binding Appointments}"
+                SelectedItem="{Binding SelectedAppointment, Mode=TwoWay}"
+                Style="{StaticResource MaterialDesignDataGrid}">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn
+                        Width="Auto"
+                        local:LocalizationProvider.ContentID="AppointmentId"
+                        Binding="{Binding AppointmentId}" />
+                    <DataGridTextColumn
+                        Width="*"
+                        local:LocalizationProvider.ContentID="AppointmentDate"
+                        Binding="{Binding AppointmentDateTime, StringFormat='dd.MM.yyyy HH:mm'}" />
+                    <DataGridTextColumn
+                        Width="Auto"
+                        local:LocalizationProvider.ContentID="PatientJMBG"
+                        Binding="{Binding PatientJMBG}" />
+                    <DataGridTextColumn
+                        Width="*"
+                        local:LocalizationProvider.ContentID="Patient"
+                        Binding="{Binding PatientName}" />
+                    <DataGridTextColumn
+                        Width="*"
+                        local:LocalizationProvider.ContentID="Dentist"
+                        Binding="{Binding DentistName}" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackPanel
+                    Grid.Row="0"
+                    Margin="10"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal">
+                    <Button
+                        local:LocalizationProvider.ContentID="Select"
+                        Click="SelectAppointment_Click"
+                        Style="{StaticResource MaterialDesignRaisedButton}" />
+                    <Button
+                        Margin="10,0,0,0"
+                        local:LocalizationProvider.ContentID="Cancel"
+                        Click="Cancel_Click"
+                        Style="{StaticResource MaterialDesignFlatButton}" />
+                </StackPanel>
+
+                <materialDesign:Snackbar
+                    x:Name="AppointmentSelectionSnackbar"
+                    Grid.Row="1"
+                    MessageQueue="{materialDesign:MessageQueue}" />
+            </Grid>
+        </Grid>
+    </materialDesign:Card>
+</Window>

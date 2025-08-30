@@ -1,0 +1,759 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddAppointment" xml:space="preserve">
+    <value>Add appointment</value>
+  </data>
+  <data name="AddNewEmployee" xml:space="preserve">
+    <value>Add New Employee</value>
+  </data>
+  <data name="AddNewPatient" xml:space="preserve">
+    <value>Add New Patient</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Appearance" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="AppointmentDate" xml:space="preserve">
+    <value>Appointment date</value>
+  </data>
+  <data name="AppointmentId" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Appointments" xml:space="preserve">
+    <value>Appointments</value>
+  </data>
+  <data name="Bill" xml:space="preserve">
+    <value>Bill</value>
+  </data>
+  <data name="BillNumber" xml:space="preserve">
+    <value>Bill number</value>
+  </data>
+  <data name="Bills" xml:space="preserve">
+    <value>Bills</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="CategoryFilter" xml:space="preserve">
+    <value>Category </value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Datetime</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteAppointment" xml:space="preserve">
+    <value>Delete Appointment</value>
+  </data>
+  <data name="Dentists" xml:space="preserve">
+    <value>Dentists</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Employees" xml:space="preserve">
+    <value>Employees</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Examinations" xml:space="preserve">
+    <value>Examinations</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="FromDate" xml:space="preserve">
+    <value>From Date</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
+  <data name="MaterialCategory" xml:space="preserve">
+    <value>Material Category</value>
+  </data>
+  <data name="MaterialCurrentStock" xml:space="preserve">
+    <value>Current Stock</value>
+  </data>
+  <data name="MaterialMinStock" xml:space="preserve">
+    <value>Minimum Stock</value>
+  </data>
+  <data name="MaterialName" xml:space="preserve">
+    <value>Material Name</value>
+  </data>
+  <data name="MaterialPrice" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Materials" xml:space="preserve">
+    <value>Materials</value>
+  </data>
+  <data name="MaterialUnit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="MedicalHistory" xml:space="preserve">
+    <value>Medical History</value>
+  </data>
+  <data name="MedicalTechnician" xml:space="preserve">
+    <value>Medical Technician</value>
+  </data>
+  <data name="MedicalTechnicians" xml:space="preserve">
+    <value>Medical Technicians</value>
+  </data>
+  <data name="MyAccount" xml:space="preserve">
+    <value>My Account</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NameFilter" xml:space="preserve">
+    <value>Name Filter</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Patient" xml:space="preserve">
+    <value>Patient</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Patients" xml:space="preserve">
+    <value>Patients</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Serbian" xml:space="preserve">
+    <value>Serbian</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="Specialization" xml:space="preserve">
+    <value>Specialization</value>
+  </data>
+  <data name="Surprise" xml:space="preserve">
+    <value>Surprise</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="ToDate" xml:space="preserve">
+    <value>To Date</value>
+  </data>
+  <data name="TotalPrice" xml:space="preserve">
+    <value>Total price</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="UpdateAppointment" xml:space="preserve">
+    <value>Update Appointment</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="ViewDetails" xml:space="preserve">
+    <value>View Details</value>
+  </data>
+  <data name="RemoveAllFilters" xml:space="preserve">
+    <value>Remove All Filters</value>
+  </data>
+  <data name="SearchByID" xml:space="preserve">
+    <value>SearchByID</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="MessageBoxTitle" xml:space="preserve">
+    <value>Message Box Title</value>
+  </data>
+  <data name="CloseTooltip" xml:space="preserve">
+    <value>Close Tooltip</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="OkTooltip" xml:space="preserve">
+    <value>Ok Tooltip</value>
+  </data>
+  <data name="YesTooltip" xml:space="preserve">
+    <value>Yes Tooltip</value>
+  </data>
+  <data name="NoTooltip" xml:space="preserve">
+    <value>No Tooltip</value>
+  </data>
+  <data name="InfoTitle" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="ConfirmationTitle" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="SuccessTitle" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="WarningTitle" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ConfirmDelete" xml:space="preserve">
+    <value>Are you sure you want to delete?</value>
+  </data>
+  <data name="NoSelection" xml:space="preserve">
+    <value>No selected items.</value>
+  </data>
+  <data name="SuccessfullyDeleted" xml:space="preserve">
+    <value>Successfully deleted.</value>
+  </data>
+  <data name="UnsuccessfullyDeleted" xml:space="preserve">
+    <value>Unsuccessfully deleted.</value>
+  </data>
+  <data name="ErrorOccurred" xml:space="preserve">
+    <value>Error.</value>
+  </data>
+  <data name="AppointmentUpdated" xml:space="preserve">
+    <value>Appointment updated.</value>
+  </data>
+  <data name="AppointmentAdded" xml:space="preserve">
+    <value>Appointment added.</value>
+  </data>
+  <data name="Refreshed" xml:space="preserve">
+    <value>Refreshed.</value>
+  </data>
+  <data name="Filtered" xml:space="preserve">
+    <value>Filtered.</value>
+  </data>
+  <data name="DentistNotFound" xml:space="preserve">
+    <value>Dentist not found.</value>
+  </data>
+  <data name="ErrorSearchingDentist" xml:space="preserve">
+    <value>Error searching dentist</value>
+  </data>
+  <data name="MedicalTechnicianNotFound" xml:space="preserve">
+    <value>Medical technician not found.</value>
+  </data>
+  <data name="ErrorSearchingMedicalTechnician" xml:space="preserve">
+    <value>Error searching medical technician</value>
+  </data>
+  <data name="PatientAdded" xml:space="preserve">
+    <value>Patient added.</value>
+  </data>
+  <data name="PatientUpdated" xml:space="preserve">
+    <value>Patient updated.</value>
+  </data>
+  <data name="PatientNotFound" xml:space="preserve">
+    <value>Patient not found.</value>
+  </data>
+  <data name="ErrorSearchingPatient" xml:space="preserve">
+    <value>Error searching patient.</value>
+  </data>
+  <data name="FillFields" xml:space="preserve">
+    <value>Please fill all the fields.</value>
+  </data>
+  <data name="InvalidCredentials" xml:space="preserve">
+    <value>Invalid credentials.</value>
+  </data>
+  <data name="Administrator" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="Dentist" xml:space="preserve">
+    <value>Dentist</value>
+  </data>
+  <data name="InvalidJmbgFormat" xml:space="preserve">
+    <value>Invalid id format (jmbg).</value>
+  </data>
+  <data name="EmployeeAdded" xml:space="preserve">
+    <value>Employee added.</value>
+  </data>
+  <data name="EmployeeNotFound" xml:space="preserve">
+    <value>Employee not found.</value>
+  </data>
+  <data name="ErrorSearchingEmployee" xml:space="preserve">
+    <value>Error searching employee.</value>
+  </data>
+  <data name="SelectRole" xml:space="preserve">
+    <value>Select role</value>
+  </data>
+  <data name="AllRoles" xml:space="preserve">
+    <value>All roles</value>
+  </data>
+  <data name="NoEmployeesFound" xml:space="preserve">
+    <value>No employees found</value>
+  </data>
+  <data name="StockFilter" xml:space="preserve">
+    <value>Stock </value>
+  </data>
+  <data name="FilterByItemCategory" xml:space="preserve">
+    <value>Filter By Category</value>
+  </data>
+  <data name="ErrorLoadingCategories" xml:space="preserve">
+    <value>Error loading categories.</value>
+  </data>
+  <data name="ErrorRefreshingData" xml:space="preserve">
+    <value>Error refreshing data.</value>
+  </data>
+  <data name="FilterCleared" xml:space="preserve">
+    <value>Filter cleared.</value>
+  </data>
+  <data name="ErrorApplyingFilter" xml:space="preserve">
+    <value>Error applying filter.</value>
+  </data>
+  <data name="CategoryAdded" xml:space="preserve">
+    <value>Category added.</value>
+  </data>
+  <data name="FailedToAddCategory" xml:space="preserve">
+    <value>Failed to add category.</value>
+  </data>
+  <data name="CategoryUpdated" xml:space="preserve">
+    <value>Category updated.</value>
+  </data>
+  <data name="CategoryDeleted" xml:space="preserve">
+    <value>Category deleted.</value>
+  </data>
+  <data name="MaterialAdded" xml:space="preserve">
+    <value>Material added.</value>
+  </data>
+  <data name="MaterialUpdated" xml:space="preserve">
+    <value>Material updated.</value>
+  </data>
+  <data name="MaterialDeleted" xml:space="preserve">
+    <value>Material deleted,</value>
+  </data>
+  <data name="ShowingAllMaterials" xml:space="preserve">
+    <value>Showing all materials.</value>
+  </data>
+  <data name="BelowMin" xml:space="preserve">
+    <value>Below the minimum</value>
+  </data>
+  <data name="Sufficient" xml:space="preserve">
+    <value>Sufficient stock</value>
+  </data>
+  <data name="SortBy" xml:space="preserve">
+    <value>Sort by</value>
+  </data>
+  <data name="PriceAscending" xml:space="preserve">
+    <value>Price - ascending</value>
+  </data>
+  <data name="PriceDescending" xml:space="preserve">
+    <value>Price - descending</value>
+  </data>
+  <data name="CurrentStockAscending" xml:space="preserve">
+    <value>Stock - ascending</value>
+  </data>
+  <data name="CurrentStockDescending" xml:space="preserve">
+    <value>Stock - descending</value>
+  </data>
+  <data name="CategoryName" xml:space="preserve">
+    <value>Category name</value>
+  </data>
+  <data name="InvalidFormat" xml:space="preserve">
+    <value>Invalid format.</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="ConfirmAdd" xml:space="preserve">
+    <value>Do you want to add a new patient?</value>
+  </data>
+  <data name="PatientID" xml:space="preserve">
+    <value>Patient ID</value>
+  </data>
+  <data name="AddMaterialTitle" xml:space="preserve">
+    <value>Add new material</value>
+  </data>
+  <data name="UpdateMaterialTitle" xml:space="preserve">
+    <value>Update material</value>
+  </data>
+  <data name="AddCategoryTitle" xml:space="preserve">
+    <value>Add new category</value>
+  </data>
+  <data name="UpdateCategoryTitle" xml:space="preserve">
+    <value>Update category</value>
+  </data>
+  <data name="AddAppointmentTitle" xml:space="preserve">
+    <value>Add new appointment</value>
+  </data>
+  <data name="AddPatientTitle" xml:space="preserve">
+    <value>Add new patient</value>
+  </data>
+  <data name="UpdatePatientTitle" xml:space="preserve">
+    <value>Update patient</value>
+  </data>
+  <data name="UpdateAppointmentTitle" xml:space="preserve">
+    <value>Update appointment</value>
+  </data>
+  <data name="PatientJMBG" xml:space="preserve">
+    <value>Patient ID</value>
+  </data>
+  <data name="DentistJMBG" xml:space="preserve">
+    <value>Dentist ID</value>
+  </data>
+  <data name="AllAppointmentsLoaded" xml:space="preserve">
+    <value>All appointments loaded.</value>
+  </data>
+  <data name="NoAppointmentsFound" xml:space="preserve">
+    <value>No appointments found</value>
+  </data>
+  <data name="ForDate" xml:space="preserve">
+    <value>For date</value>
+  </data>
+  <data name="ForPatientJMBG" xml:space="preserve">
+    <value>For patient</value>
+  </data>
+  <data name="ForDentistJMBG" xml:space="preserve">
+    <value>For dentist</value>
+  </data>
+  <data name="AllDentists" xml:space="preserve">
+    <value>All dentists</value>
+  </data>
+  <data name="Sorted" xml:space="preserve">
+    <value>Sorted.</value>
+  </data>
+  <data name="DateAscending" xml:space="preserve">
+    <value>Date - ascending</value>
+  </data>
+  <data name="DateDescending" xml:space="preserve">
+    <value>Date - descending</value>
+  </data>
+  <data name="AccountUpdated" xml:space="preserve">
+    <value>Account updated.</value>
+  </data>
+  <data name="InvalidEmailFormat" xml:space="preserve">
+    <value>Invalid email format.</value>
+  </data>
+  <data name="InvalidPhoneFormat" xml:space="preserve">
+    <value>Invalid phone format.</value>
+  </data>
+  <data name="AddExaminationTitle" xml:space="preserve">
+    <value>Add new examination</value>
+  </data>
+  <data name="UpdateExaminationTitle" xml:space="preserve">
+    <value>Update examination</value>
+  </data>
+  <data name="AllExaminationsLoaded" xml:space="preserve">
+    <value>All examinations loaded.</value>
+  </data>
+  <data name="NoExaminationsFound" xml:space="preserve">
+    <value>No examinations found.</value>
+  </data>
+  <data name="ForDentist" xml:space="preserve">
+    <value>For dentist</value>
+  </data>
+  <data name="ExaminationAdded" xml:space="preserve">
+    <value>Examination added.</value>
+  </data>
+  <data name="ExaminationUpdated" xml:space="preserve">
+    <value>Examination updated.</value>
+  </data>
+  <data name="EnterAppointmentId" xml:space="preserve">
+    <value>Enter appointment ID.</value>
+  </data>
+  <data name="AppointmentFound" xml:space="preserve">
+    <value>Appointment found.</value>
+  </data>
+  <data name="AppointmentNotFound" xml:space="preserve">
+    <value>Appointment not found.</value>
+  </data>
+  <data name="AppointmentSelected" xml:space="preserve">
+    <value>Appointment selected.</value>
+  </data>
+  <data name="EnterDiagnosis" xml:space="preserve">
+    <value>Enter diagnosis.</value>
+  </data>
+  <data name="SelectAppointment" xml:space="preserve">
+    <value>Select appointment</value>
+  </data>
+  <data name="SelectMedicalTechnician" xml:space="preserve">
+    <value>Select medical technician</value>
+  </data>
+  <data name="ExaminationAlreadyExists" xml:space="preserve">
+    <value>Examination already exists.</value>
+  </data>
+  <data name="Diagnosis" xml:space="preserve">
+    <value>Diagnosis</value>
+  </data>
+  <data name="Treatments" xml:space="preserve">
+    <value>Treatments</value>
+  </data>
+  <data name="TreatmentAdded" xml:space="preserve">
+    <value>Treatment added.</value>
+  </data>
+  <data name="TreatmentUpdated" xml:space="preserve">
+    <value>Treatment updated.</value>
+  </data>
+  <data name="AddNewTreatment" xml:space="preserve">
+    <value>Add new treatment</value>
+  </data>
+  <data name="UpdateTreatment" xml:space="preserve">
+    <value>Update treatment</value>
+  </data>
+  <data name="InvalidPriceFormat" xml:space="preserve">
+    <value>Invalid price format.</value>
+  </data>
+  <data name="SortCleared" xml:space="preserve">
+    <value>Sort cleared.</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="AppointmentSelection" xml:space="preserve">
+    <value>Appointment selection</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="AlreadyAdded" xml:space="preserve">
+    <value>Already added</value>
+  </data>
+  <data name="ChooseMaterial" xml:space="preserve">
+    <value>Choose material and quantity</value>
+  </data>
+  <data name="ChooseMaterial1" xml:space="preserve">
+    <value>Choose material and quantity</value>
+  </data>
+  <data name="MaterialError" xml:space="preserve">
+    <value>Material adding error</value>
+  </data>
+  <data name="MaterialWarning" xml:space="preserve">
+    <value>Material warning</value>
+  </data>
+  <data name="MaterialErrorUpdate" xml:space="preserve">
+    <value>Material error update</value>
+  </data>
+  <data name="NameSurname" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="PatientInformation" xml:space="preserve">
+    <value>Patient information</value>
+  </data>
+  <data name="ExaminationInformation" xml:space="preserve">
+    <value>Examination information</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+  <data name="FilteredErrorDate" xml:space="preserve">
+    <value>Pick a date</value>
+  </data>
+  <data name="SelectBillToView" xml:space="preserve">
+    <value>Select bill to view</value>
+  </data>
+  <data name="PatientFound" xml:space="preserve">
+    <value>Patient found</value>
+  </data>
+  <data name="DeleteNotAllowed" xml:space="preserve">
+    <value>Cannot delete record because there are related data.</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>SUN</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>MON</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>TUE</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>WED</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>THU</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>FRI</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>SAT</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="AppointmentTimeTaken" xml:space="preserve">
+    <value>Appointment time slot is already taken for the selected dentist</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Sort" xml:space="preserve">
+    <value>Sort</value>
+  </data>
+</root>

@@ -1,0 +1,223 @@
+﻿<Window
+    x:Class="DentalCareSystem.Forms.Windows.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DentalCareSystem.Util"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="DentalCareSystem"
+    Loaded="Window_Loaded"
+    WindowStartupLocation="CenterScreen"
+    WindowState="Maximized"
+    local:LocalizationProvider.TitleID="MainWindow"
+    mc:Ignorable="d">
+    
+
+    <Grid>
+        <materialDesign:Card>
+            <DockPanel LastChildFill="True">
+
+                <TabControl
+                    x:Name="MainTabControl"
+                    Padding="5"
+                    HorizontalContentAlignment="Stretch"
+                    VerticalContentAlignment="Top"
+                    materialDesign:ColorZoneAssist.Mode="PrimaryMid"
+                    Style="{StaticResource MaterialDesignNavigationRailTabControl}">
+
+                    <TabControl.Resources>
+                        <Style TargetType="{x:Type TabControl}" BasedOn="{StaticResource MaterialDesignNavigationRailTabControl}">
+                            <Setter Property="Width" Value="300" />
+                        </Style>
+                        <Style TargetType="{x:Type TabItem}">
+                            <Setter Property="MinWidth" Value="300" />
+                            <Setter Property="Width" Value="300" />
+                        </Style>
+                    </TabControl.Resources>
+
+                    <TabItem x:Name="AppointmentsTabItem" Margin="5" MinWidth="150">
+                        <TabItem.Header>
+                            <StackPanel Width="auto" Height="auto">
+                                <materialDesign:PackIcon Width="24" Height="24" HorizontalAlignment="Center" Kind="CalendarAccountOutline" />
+                                <TextBlock 
+                                    HorizontalAlignment="Center" 
+                                    local:LocalizationProvider.ContentID="Appointments"
+                                    Style="{StaticResource MaterialDesignBody1TextBlock}" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <TabItem.Content>
+                            <Frame Name="AppointmentsPage" Source="/Forms/Pages/AppointmentsPage.xaml" />
+                        </TabItem.Content>
+                    </TabItem>
+
+                    <TabItem x:Name="ExaminationsTabItem" Margin="5" MinWidth="150">
+                        <TabItem.Header>
+                            <StackPanel Width="auto" Height="auto">
+                                <materialDesign:PackIcon Width="24" Height="24" HorizontalAlignment="Center" Kind="ToothOutline" />
+                                <TextBlock 
+                                    HorizontalAlignment="Center" 
+                                    local:LocalizationProvider.ContentID="Examinations"
+                                    Style="{StaticResource MaterialDesignBody1TextBlock}" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <TabItem.Content>
+                            <Frame Name="ExaminationsPage" Source="/Forms/Pages/ExaminationsPage.xaml" />
+                        </TabItem.Content>
+                    </TabItem>
+
+
+                    <TabItem x:Name="EmployeesTabItem" Margin="5" MinWidth="150">
+                        <TabItem.Header>
+                            <StackPanel Width="auto" Height="auto">
+                                <materialDesign:PackIcon Width="24" Height="24" HorizontalAlignment="Center" Kind="PersonOutline" />
+                                <TextBlock 
+                                    HorizontalAlignment="Center" 
+                                    local:LocalizationProvider.ContentID="Employees"
+                                    Style="{StaticResource MaterialDesignBody1TextBlock}" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <TabItem.Content>
+                            <Frame Name="EmployeesPage" Source="/Forms/Pages/EmployeesPage.xaml" />
+                        </TabItem.Content>
+                    </TabItem>
+
+                    <TabItem x:Name="PatientsTabItem" Margin="5" MinWidth="150">
+                        <TabItem.Header>
+                            <StackPanel Width="auto" Height="auto">
+                                <materialDesign:PackIcon Width="24" Height="24" HorizontalAlignment="Center" Kind="Account" />
+                                <TextBlock 
+                                    HorizontalAlignment="Center" 
+                                    local:LocalizationProvider.ContentID="Patients"
+                                    Style="{StaticResource MaterialDesignBody1TextBlock}" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <TabItem.Content>
+                            <Frame Name="PatientsPage" Source="/Forms/Pages/PatientsPage.xaml" />
+                        </TabItem.Content>
+                    </TabItem>
+
+                    <TabItem x:Name="DentistsTabItem" Margin="5" MinWidth="150">
+                        <TabItem.Header>
+                            <StackPanel Width="auto" Height="auto">
+                                <materialDesign:PackIcon Width="24" Height="24" HorizontalAlignment="Center" Kind="Doctor" />
+                                <TextBlock 
+                                    HorizontalAlignment="Center" 
+                                    local:LocalizationProvider.ContentID="Dentists"
+                                    Style="{StaticResource MaterialDesignBody1TextBlock}" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <TabItem.Content>
+                            <Frame Name="DentistsPage" Source="/Forms/Pages/DentistsPage.xaml" />
+                        </TabItem.Content>
+                    </TabItem>
+
+                    <TabItem x:Name="MedicalTechniciansTabItem" Margin="5" MinWidth="150">
+                        <TabItem.Header>
+                            <StackPanel Width="auto" Height="auto">
+                                <materialDesign:PackIcon Width="24" Height="24" HorizontalAlignment="Center" Kind="AccountHeartOutline" />
+                                <TextBlock 
+                                    HorizontalAlignment="Center" 
+                                    local:LocalizationProvider.ContentID="MedicalTechnicians"
+                                    Style="{StaticResource MaterialDesignBody1TextBlock}" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <TabItem.Content>
+                            <Frame Name="MedicalTechniciansPage" Source="/Forms/Pages/MedicalTechniciansPage.xaml" />
+                        </TabItem.Content>
+                    </TabItem>
+
+                    <TabItem x:Name="BillsTabItem" Margin="5" MinWidth="150">
+                        <TabItem.Header>
+                            <StackPanel Width="auto" Height="auto">
+                                <materialDesign:PackIcon Width="24" Height="24" HorizontalAlignment="Center" Kind="ReceiptTextOutline" />
+                                <TextBlock 
+                                    HorizontalAlignment="Center"
+                                    local:LocalizationProvider.ContentID="Bills"
+                                    Style="{StaticResource MaterialDesignBody1TextBlock}" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <TabItem.Content>
+                            <Frame Name="BillsPage" Source="/Forms/Pages/BillsPage.xaml" />
+                        </TabItem.Content>
+                    </TabItem>
+
+
+                    <TabItem x:Name="MaterialsAdminTabItem" Margin="5" MinWidth="150">
+                        <TabItem.Header>
+                            <StackPanel Width="auto" Height="auto">
+                                <materialDesign:PackIcon Width="24" Height="24" HorizontalAlignment="Center" Kind="Medication" />
+                                <TextBlock 
+                                    HorizontalAlignment="Center"
+                                    local:LocalizationProvider.ContentID="Materials"
+                                    Style="{StaticResource MaterialDesignBody1TextBlock}" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <TabItem.Content>
+                            <Frame Name="MaterialsPageAdmin" Source="/Forms/Pages/MaterialsPageAdmin.xaml" />
+                        </TabItem.Content>
+                    </TabItem>
+
+                    <TabItem x:Name="TreatmentsTabItem" Margin="5" MinWidth="150">
+                        <TabItem.Header>
+                            <StackPanel Width="auto" Height="auto">
+                                <materialDesign:PackIcon Width="24" Height="24" HorizontalAlignment="Center" Kind="ToothOutline" />
+                                <TextBlock 
+                                    HorizontalAlignment="Center"
+                                    local:LocalizationProvider.ContentID="Treatments"
+                                    Style="{StaticResource MaterialDesignBody1TextBlock}" />
+                            </StackPanel>   
+                        </TabItem.Header>
+                        <TabItem.Content>
+                            <Frame Name="TreatmentsPage" Source="/Forms/Pages/TreatmentsPage.xaml" />
+                        </TabItem.Content>
+                    </TabItem>
+
+                    <TabItem x:Name="MaterialsTabItem" Margin="5" MinWidth="150">
+                        <TabItem.Header>
+                            <StackPanel Width="auto" Height="auto">
+                                <materialDesign:PackIcon Width="24" Height="24" HorizontalAlignment="Center" Kind="Pill" />
+                                <TextBlock 
+                                    HorizontalAlignment="Center"
+                                    local:LocalizationProvider.ContentID="Materials"
+                                    Style="{StaticResource MaterialDesignBody1TextBlock}" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <TabItem.Content>
+                            <Frame Name="MaterialsPage" Source="/Forms/Pages/MaterialsPage.xaml" />
+                        </TabItem.Content>
+                    </TabItem>
+
+                    <TabItem x:Name="SettingsTabItem" Margin="5" MinWidth="150">
+                        <TabItem.Header>
+                            <StackPanel Width="auto" Height="auto">
+                                <materialDesign:PackIcon Width="24" Height="24" HorizontalAlignment="Center" Kind="SettingsOutline" />
+                                <TextBlock 
+                                    HorizontalAlignment="Center"
+                                    local:LocalizationProvider.ContentID="Settings"
+                                    Style="{StaticResource MaterialDesignBody1TextBlock}" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <TabItem.Content>
+                            <Frame Name="SettingsPage" Source="/Forms/Pages/SettingsPage.xaml" />
+                        </TabItem.Content>
+                    </TabItem>
+
+                    <TabItem x:Name="LogOutTabItem" Margin="5" MinWidth="150" MouseUp="LogOut_Click">
+                        <TabItem.Header>
+                            <StackPanel Width="auto" Height="auto">
+                                <materialDesign:PackIcon Width="24" Height="24" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Kind="LogoutVariant" />
+                                <TextBlock 
+                                    HorizontalAlignment="Center"
+                                    local:LocalizationProvider.ContentID="LogOut"
+                                    Style="{StaticResource MaterialDesignBody1TextBlock}" />
+                            </StackPanel>
+                        </TabItem.Header>
+                    </TabItem>
+
+                </TabControl>
+
+            </DockPanel>
+        </materialDesign:Card>
+    </Grid>
+</Window>

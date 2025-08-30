@@ -1,0 +1,116 @@
+﻿<Window
+    x:Class="DentalCareSystem.Forms.Windows.Modals.MaterialModal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DentalCareSystem.Util"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MaterialModal"
+    AllowsTransparency="True"
+    Background="#33000000"
+    WindowStartupLocation="CenterOwner"
+    WindowStyle="None"
+    WindowState="Maximized"
+    mc:Ignorable="d">
+    <Grid
+        Margin="0,0,0,0"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Background="{StaticResource MaterialDesignCardBackground}">
+
+        <materialDesign:Snackbar
+            x:Name="MaterialModalSnackbar"
+            Background="{StaticResource MaterialDesignSnackbarRipple}"
+            IsActive="False"
+            MessageQueue="{materialDesign:MessageQueue}" />
+
+        <StackPanel
+            MinWidth="350"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Stretch"
+            UseLayoutRounding="False">
+            <Label
+                Margin="20,20,20,0"
+                Padding="4,4,4,4"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                x:Name="ModalTitle"
+                FontSize="16"
+                FontWeight="Bold" />
+
+            <TextBox
+                x:Name="NameTextBox"
+                MaxWidth="250"
+                Margin="0,20,0,10"
+                local:LocalizationProvider.ContentID="MaterialName"
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                Text="{Binding Name}" />
+            <ComboBox
+                x:Name="UnitComboBox"
+                MaxWidth="250"
+                Margin="0,20,0,10"
+                local:LocalizationProvider.ContentID="MaterialUnit"
+                Style="{StaticResource MaterialDesignFilledComboBox}"
+                ItemsSource="{Binding AvailableUnits}"
+                SelectedItem="{Binding Unit}"
+                IsEditable="True" />
+            <ComboBox
+                x:Name="CategoryComboBox"
+                MaxWidth="250"
+                Margin="0,0,0,10"
+                local:LocalizationProvider.ContentID="MaterialCategory"
+                Style="{StaticResource MaterialDesignFilledComboBox}"
+                ItemsSource="{Binding Categories}"
+                DisplayMemberPath="Name"
+                SelectedItem="{Binding Category}" />
+
+            <TextBox
+                x:Name="PricePerUnitTextBox"
+                MaxWidth="250"
+                Margin="0,0,0,10"
+                local:LocalizationProvider.ContentID="MaterialPrice"
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                Text="{Binding PricePerUnit}" />
+
+            <TextBox
+                x:Name="MinimumStockTextBox"
+                MaxWidth="250"
+                Margin="0,0,0,10"
+                local:LocalizationProvider.ContentID="MaterialMinStock"
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                Text="{Binding MinimumStock}" />
+
+            <TextBox
+                x:Name="CurrentStockTextBox"
+                MaxWidth="250"
+                Margin="0,0,0,10"
+                local:LocalizationProvider.ContentID="MaterialCurrentStock"
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                Text="{Binding CurrentStock}" />
+
+            <StackPanel
+                Margin="0,0,0,50"
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
+                <Button
+                    MinWidth="110"
+                    Margin="0,0,30,0"
+                    HorizontalAlignment="Left"
+                    local:LocalizationProvider.ContentID="Save"
+                    Click="AddOrUpdate_Click"
+                    FontSize="16"
+                    FontWeight="Bold" />
+                <Button
+                    MinWidth="110"
+                    local:LocalizationProvider.ContentID="Cancel"
+                    BorderBrush="#FF7D7373"
+                    BorderThickness="1,1,1,1"
+                    Click="Cancel_Click"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Style="{StaticResource MaterialDesignFlatButton}" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,197 @@
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+
+CREATE SCHEMA IF NOT EXISTS `ordinacija_hci` DEFAULT CHARACTER SET utf8mb3 ;
+USE `ordinacija_hci` ;
+
+
+CREATE TABLE IF NOT EXISTS `ordinacija_hci`.`PACIJENT` (
+  `JMBG` VARCHAR(13) NOT NULL,
+  `Ime` VARCHAR(45) NOT NULL,
+  `Prezime` VARCHAR(45) NOT NULL,
+  `BrojTelefona` VARCHAR(20) NOT NULL,
+  `Adresa` VARCHAR(45) NOT NULL,
+  `Email` VARCHAR(255) NOT NULL,
+  `ZdravstvenaIstorija` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`JMBG`))
+ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS `ordinacija_hci`.`ZAPOSLENI` (
+  `JMBG` VARCHAR(13) NOT NULL,
+  `Uloga` VARCHAR(45) NOT NULL,
+  `Ime` VARCHAR(45) NOT NULL,
+  `Prezime` VARCHAR(45) NOT NULL,
+  `KorisnickoIme` VARCHAR(50) NOT NULL,
+  `Lozinka` VARCHAR(256) NOT NULL,
+  `BrojTelefona` VARCHAR(20) NOT NULL,
+  `Email` VARCHAR(255) NOT NULL,
+  `Specijalizacija` VARCHAR(100) NULL,
+  PRIMARY KEY (`JMBG`))
+ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS `ordinacija_hci`.`TERMIN` (
+  `idTermina` INT NOT NULL AUTO_INCREMENT,
+  `DatumIVrijeme` DATETIME NOT NULL,
+  `JMBGPacijenta` VARCHAR(13) NOT NULL,
+  `JMBGStomatologa` VARCHAR(13) NOT NULL,
+  `JMBGMedicinskogTehnicara` VARCHAR(13),
+  PRIMARY KEY (`idTermina`),
+  INDEX `JMBGPacijenta_idx` (`JMBGPacijenta` ASC) VISIBLE,
+  INDEX `fk_TERMIN_ZAPOSLENI1_idx` (`JMBGStomatologa` ASC) VISIBLE,
+  INDEX `fk_TERMIN_ZAPOSLENI2_idx` (`JMBGMedicinskogTehnicara` ASC) VISIBLE,
+  CONSTRAINT `fk_TERMIN_PACIJENT`
+    FOREIGN KEY (`JMBGPacijenta`)
+    REFERENCES `ordinacija_hci`.`PACIJENT` (`JMBG`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_TERMIN_ZAPOSLENI1`
+    FOREIGN KEY (`JMBGStomatologa`)
+    REFERENCES `ordinacija_hci`.`ZAPOSLENI` (`JMBG`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_TERMIN_ZAPOSLENI2`
+    FOREIGN KEY (`JMBGMedicinskogTehnicara`)
+    REFERENCES `ordinacija_hci`.`ZAPOSLENI` (`JMBG`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS `ordinacija_hci`.`PREGLED` (
+  `idPregleda` INT NOT NULL AUTO_INCREMENT,
+  `Dijagnoza` VARCHAR(45) NOT NULL,
+  `idTermina` INT NOT NULL,
+  `JMBGMedicinskogTehnicara` VARCHAR(13) NOT NULL,
+  PRIMARY KEY (`idPregleda`),
+  INDEX `fk_PREGLED_TERMIN1_idx` (`idTermina` ASC) VISIBLE,
+  INDEX `fk_PREGLED_ZAPOSLENI1_idx` (`JMBGMedicinskogTehnicara` ASC) VISIBLE,
+  CONSTRAINT `fk_PREGLED_TERMIN1`
+    FOREIGN KEY (`idTermina`)
+    REFERENCES `ordinacija_hci`.`TERMIN` (`idTermina`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_PREGLED_ZAPOSLENI1`
+    FOREIGN KEY (`JMBGMedicinskogTehnicara`)
+    REFERENCES `ordinacija_hci`.`ZAPOSLENI` (`JMBG`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS `ordinacija_hci`.`TRETMAN` (
+  `idTretmana` INT NOT NULL AUTO_INCREMENT,
+  `Naziv` VARCHAR(45) NOT NULL,
+  `Cijena` DECIMAL(8,2) NOT NULL,
+  PRIMARY KEY (`idTretmana`))
+ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS `ordinacija_hci`.`RACUN` (
+  `idRacuna` INT NOT NULL AUTO_INCREMENT,
+  `Iznos` DECIMAL(8,2) NOT NULL,
+  `DatumIzdavanja` DATETIME NOT NULL,
+  `idPregleda` INT NOT NULL,
+  `JMBGPacijenta` VARCHAR(13) NOT NULL,
+  `JMBGMedicinskogTehnicara` VARCHAR(13) NOT NULL,
+  PRIMARY KEY (`idRacuna`),
+  INDEX `JMBGPacijenta_idx` (`JMBGPacijenta` ASC) VISIBLE,
+  INDEX `fk_RACUN_PREGLED1_idx` (`idPregleda` ASC) VISIBLE,
+  INDEX `fk_RACUN_ZAPOSLENI1_idx` (`JMBGMedicinskogTehnicara` ASC) VISIBLE,
+  CONSTRAINT `JMBGPacijenta`
+    FOREIGN KEY (`JMBGPacijenta`)
+    REFERENCES `ordinacija_hci`.`PACIJENT` (`JMBG`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_RACUN_PREGLED1`
+    FOREIGN KEY (`idPregleda`)
+    REFERENCES `ordinacija_hci`.`PREGLED` (`idPregleda`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_RACUN_ZAPOSLENI1`
+    FOREIGN KEY (`JMBGMedicinskogTehnicara`)
+    REFERENCES `ordinacija_hci`.`ZAPOSLENI` (`JMBG`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS `ordinacija_hci`.`TRETMAN_STAVKA` (
+  `idTretmana` INT NOT NULL,
+  `idPregleda` INT NOT NULL,
+  `Cijena` DECIMAL(8,2) NOT NULL,
+  PRIMARY KEY (`idTretmana`, `idPregleda`),
+  INDEX `fk_TRETMAN_has_PREGLED_PREGLED1_idx` (`idPregleda` ASC) VISIBLE,
+  INDEX `fk_TRETMAN_has_PREGLED_TRETMAN1_idx` (`idTretmana` ASC) VISIBLE,
+  CONSTRAINT `fk_TRETMAN_has_PREGLED_TRETMAN1`
+    FOREIGN KEY (`idTretmana`)
+    REFERENCES `ordinacija_hci`.`TRETMAN` (`idTretmana`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_TRETMAN_has_PREGLED_PREGLED1`
+    FOREIGN KEY (`idPregleda`)
+    REFERENCES `ordinacija_hci`.`PREGLED` (`idPregleda`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS `ordinacija_hci`.`KATEGORIJA` (
+  `idKategorije` INT NOT NULL AUTO_INCREMENT,
+  `Naziv` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`idKategorije`))
+ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS `ordinacija_hci`.`MATERIJAL` (
+  `idMaterijala` INT NOT NULL AUTO_INCREMENT,
+  `idKategorije` INT NOT NULL,
+  `Naziv` VARCHAR(45) NOT NULL,
+  `JedinicaMjere` VARCHAR(20) NOT NULL,
+  `CijenaPoJedinici` DECIMAL(8,2) NOT NULL,
+  `MinimalnaZaliha` DECIMAL(10,2) NOT NULL,
+  `TrenutnaZaliha` DECIMAL(10,2) NOT NULL,
+  PRIMARY KEY (`idMaterijala`),
+  INDEX `fk_MATERIJAL_KATEGORIJA1_idx` (`idKategorije` ASC) VISIBLE,
+  CONSTRAINT `fk_MATERIJAL_KATEGORIJA1`
+    FOREIGN KEY (`idKategorije`)
+    REFERENCES `ordinacija_hci`.`KATEGORIJA` (`idKategorije`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS `ordinacija_hci`.`MATERIJAL_STAVKA` (
+  `idPregleda` INT NOT NULL,
+  `idMaterijala` INT NOT NULL,
+  `Kolicina` DECIMAL(10,2) NOT NULL,
+  PRIMARY KEY (`idPregleda`, `idMaterijala`),
+  INDEX `fk_PREGLED_has_MATERIJAL_MATERIJAL1_idx` (`idMaterijala` ASC) VISIBLE,
+  INDEX `fk_PREGLED_has_MATERIJAL_PREGLED1_idx` (`idPregleda` ASC) VISIBLE,
+  CONSTRAINT `fk_PREGLED_has_MATERIJAL_PREGLED1`
+    FOREIGN KEY (`idPregleda`)
+    REFERENCES `ordinacija_hci`.`PREGLED` (`idPregleda`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_PREGLED_has_MATERIJAL_MATERIJAL1`
+    FOREIGN KEY (`idMaterijala`)
+    REFERENCES `ordinacija_hci`.`MATERIJAL` (`idMaterijala`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+create table upozorenja (
+    id int auto_increment primary key,
+    idMaterijala int,
+    poruka varchar(255),
+    datum datetime default current_timestamp
+);
+
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
