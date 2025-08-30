@@ -1,0 +1,31 @@
+# HCI-DentalCareSystem
+## Human computer interaction - Project
+<img width="866" height="562" alt="Screenshot (80)" src="https://github.com/user-attachments/assets/878a95e2-f2cb-45c6-ac9b-f9abf93d83e3" />
+<img width="1920" height="1007" alt="Screenshot (32)" src="https://github.com/user-attachments/assets/9ddfdad7-1643-414b-97f3-98f58a3974bc" />
+<img width="861" height="939" alt="Screenshot (33)" src="https://github.com/user-attachments/assets/46c7fe46-0b5f-4b9d-a74d-e98fe4ab3efb" />
+<img width="1920" height="1004" alt="Screenshot (28)" src="https://github.com/user-attachments/assets/3e5975a8-5773-4bee-af1e-a75d86ec0121" />
+<img width="500" height="399" alt="Screenshot (29)" src="https://github.com/user-attachments/assets/88a8545f-a11d-4e54-bc46-fb3a796401fa" />
+<img width="312" height="277" alt="Screenshot (30)" src="https://github.com/user-attachments/assets/4835e130-8034-4067-a091-46d10c398a8b" />
+<img width="1920" height="993" alt="Screenshot (31)" src="https://github.com/user-attachments/assets/aaf4cc53-84c8-4249-a57c-356f2646a0c1" />
+<img width="474" height="360" alt="Screenshot (35)" src="https://github.com/user-attachments/assets/f82ae70a-e26c-4698-8997-05d24f13efb3" />
+<img width="550" height="718" alt="Screenshot (92)" src="https://github.com/user-attachments/assets/01a2bb60-2181-45d0-9100-87c94c369b49" />
+<img width="1920" height="1011" alt="Screenshot (37)" src="https://github.com/user-attachments/assets/570186d2-0e34-4889-b4b3-7bc92a179228" />
+<img width="488" height="469" alt="Screenshot (38)" src="https://github.com/user-attachments/assets/c4018bd1-dc96-467a-84e2-0c217723ed78" />
+<img width="1920" height="1011" alt="Screenshot (78)" src="https://github.com/user-attachments/assets/d656f578-c7ab-4dc5-9f39-b81cdc463ab0" />
+<img width="1920" height="1017" alt="Screenshot (79)" src="https://github.com/user-attachments/assets/6a81cbee-9431-45df-88f1-6213190acb8e" />
+<img width="583" height="619" alt="Screenshot (74)" src="https://github.com/user-attachments/assets/b336bfb3-fe9f-44df-a231-dfc2619ad9cc" />
+<img width="1920" height="1004" alt="Screenshot (53)" src="https://github.com/user-attachments/assets/04475ac1-98be-4b02-8c02-2b5098540be6" />
+<img width="893" height="988" alt="Screenshot (58)" src="https://github.com/user-attachments/assets/6e984c2b-ce76-4b30-8c8a-e7ed217d61c4" />
+<img width="1054" height="793" alt="Screenshot (56)" src="https://github.com/user-attachments/assets/62f03401-ef5b-4538-9953-3ff69dd58b9f" />
+<img width="656" height="888" alt="Screenshot (59)" src="https://github.com/user-attachments/assets/76d1b50c-c3c2-4767-94e0-286e2c031fdb" />
+<img width="1920" height="1007" alt="Screenshot (60)" src="https://github.com/user-attachments/assets/bf0c3e67-885f-4203-8ee1-db489496c410" />
+<img width="465" height="730" alt="Screenshot (61)" src="https://github.com/user-attachments/assets/49e1cad1-ce1c-4289-b685-7ca2bfcf1f64" />
+<img width="1920" height="1007" alt="Screenshot (62)" src="https://github.com/user-attachments/assets/c51f5d86-d76f-4b2f-be7b-0d9eba872d4b" />
+<img width="1920" height="1007" alt="Screenshot (63)" src="https://github.com/user-attachments/assets/8d2fd707-33ff-4aee-af38-09fe53990821" />
+<img width="1920" height="1011" alt="Screenshot (65)" src="https://github.com/user-attachments/assets/0caf330c-2880-4855-8b6f-14f58b737418" />
+<img width="652" height="490" alt="Screenshot (67)" src="https://github.com/user-attachments/assets/e48e0d0e-7c42-40b9-ba27-a0181319fb39" />
+<img width="1920" height="1004" alt="Screenshot (69)" src="https://github.com/user-attachments/assets/590f4c7d-bd44-493f-a663-50b5f6ac2a66" />
+<img width="1920" height="1024" alt="Screenshot (39)" src="https://github.com/user-attachments/assets/ba7d1beb-702e-47b4-8e28-bb6f4720a303" />
+<img width="1920" height="1011" alt="Screenshot (43)" src="https://github.com/user-attachments/assets/3d939134-31a8-4881-b384-efb4d4992ffb" />
+<img width="1920" height="1014" alt="Screenshot (82)" src="https://github.com/user-attachments/assets/68bc48a1-dbd7-461c-9b9d-a487e3e789a6" />
+<img width="1920" height="1004" alt="Screenshot (83)" src="https://github.com/user-attachments/assets/c6d824f7-efbc-47ff-9a86-4168f4339ded" />
